@@ -1,0 +1,87 @@
+body,html {
+    min-width: 405px;
+    min-height:940px;
+}
+.wrap {
+    position: relative;
+    width: 405px;
+    height:940px;
+    margin: 0 auto;
+    top:150px;
+}
+#game{
+    margin: 0 auto;
+    position: relative;
+    top:150px;
+}
+
+#game .item{
+    position: absolute;
+    width: 45px;
+    height: 45px;
+    background-size: 100% 100%;
+    /* 用JS控制坐标 */
+}
+/* 墙 */
+#game .wall{
+    background-image: url("./imgs/wall.jpg");
+}
+/* 箱子 */
+#game .box{
+    background-image: url("./imgs/box.png");
+}
+/* 玩家 */
+#game .player{
+    background-image: url("./imgs/player.png");
+}
+/* 正确状态的箱子 */
+#game .correct-box{
+    background-image: url("./imgs/over_box.png");
+}
+#game .correct{
+    border: 2px solid rgb(24, 151, 24);
+    /* 设置下面的属性之后，宽高影响的范围是边框盒 */
+    box-sizing: border-box;
+}
+.info {
+    width: 100%;
+    position: absolute;;
+    bottom:0px;
+    left:50%;
+    transform:translateX(-50%);
+}
+.info .btn-ar {
+    display:flex;
+    justify-content:space-around;
+}
+.info p {
+    color:#409eff;
+}
+.info .btn {
+    display: inline-block;
+    line-height: 1;
+    white-space: nowrap;
+    cursor: pointer;
+    background: #fff;
+    border: 1px solid #dcdfe6;
+    color: #606266;
+    -webkit-appearance: none;
+    text-align: center;
+    box-sizing: border-box;
+    outline: none;
+    margin: 0;
+    transition: .1s;
+    font-weight: 500;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    padding: 12px 20px;
+    font-size: 14px;
+    border-radius: 4px;
+
+}
+.info .btn.game_reload {
+    color: #fff;
+    background-color: #f56c6c;
+    border-color: #f56c6c;
+}
